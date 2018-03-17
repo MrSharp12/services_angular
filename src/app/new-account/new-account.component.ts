@@ -8,7 +8,7 @@ import { AccountServices } from 'app/accounts.service';
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
   //provides lets angular know how to give us what is made in the constructor
-  providers: [LoggingService]
+  // providers: [LoggingService]
 })
 export class NewAccountComponent {
 
@@ -20,6 +20,6 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountServices.addAccount(accountName, accountStatus);
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
   }
 }
