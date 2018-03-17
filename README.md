@@ -1,2 +1,2 @@
 # services_angular
-injecting services into services
+using services for cross-component communication

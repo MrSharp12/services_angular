@@ -1,5 +1,6 @@
 import { LoggingService } from "app/logging.service";
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
+
 //here we are adding meta data
 // let's angular know that it is an injectable
 //you at @Injectable to the service where you want something injected
@@ -21,6 +22,8 @@ export class AccountServices {
           status: 'unknown'
         }
       ];
+
+      statusUpdated = new EventEmitter<string>();
 
       constructor(private loggingService: LoggingService) {}
     

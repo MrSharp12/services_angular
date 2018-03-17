@@ -15,7 +15,9 @@ export class NewAccountComponent {
   //this tells angular we need an instance of this service
   constructor(private loggingService: LoggingService,
               private accountServices: AccountServices) {
-
+         this.accountServices.statusUpdated.subscribe(
+           (status: string) => alert('New Status: ' + status)
+         );       
               }
 
   onCreateAccount(accountName: string, accountStatus: string) {

@@ -19,5 +19,7 @@ export class AccountComponent {
   onSetTo(status: string) {
     this.accountService.updateStatus(this.id, status);
     // this.loggingService.logStatusChange(status);
+    //this emits the event that was set up in the service file
+    this.accountService.statusUpdated.emit(status);
   }
 }
